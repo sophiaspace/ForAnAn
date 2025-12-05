@@ -40,11 +40,6 @@ body {
     flex-grow: 1;
 }
 
-h1 {
-    font-size: 28px;
-}
-
-/* Content */
 .content {
     display: none;
     background: white;
@@ -52,7 +47,6 @@ h1 {
     border-radius: 12px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
-
 .active {
     display: block;
 }
@@ -84,55 +78,39 @@ h1 {
     color: #2ecc71;
 }
 
-/* Maze Canvas */
+/* Maze Game */
 #mazeCanvas {
     border: 3px solid #2ecc71;
     border-radius: 10px;
 }
 
-/* Responsive: Mobile */
-@media (max-width: 768px) {
-    .sidebar {
-        width: 150px;
-    }
-    .main-content {
-        margin-left: 160px;
-    }
-}
-
+/* Mobile */
 @media (max-width: 480px) {
     body {
         flex-direction: column;
     }
-
     .sidebar {
         width: 100%;
         position: relative;
         display: flex;
         justify-content: space-around;
-        box-shadow: none;
     }
-
     .main-content {
         margin-left: 0;
         margin-top: 10px;
     }
-
     .memory-game {
         grid-template-columns: repeat(4, 60px);
     }
-
     .card {
         width: 60px;
         height: 60px;
     }
 
-    /* Mobile Game Controls */
     .controls {
         margin-top: 15px;
         text-align: center;
     }
-
     .btn-control {
         background: #2ecc71;
         color: white;
@@ -142,17 +120,13 @@ h1 {
         font-size: 20px;
         border-radius: 10px;
         cursor: pointer;
-        box-shadow: 0 0 5px rgba(0,0,0,0.2);
     }
-
     .btn-control:active {
         background: #27ae60;
     }
-
     .middle-row {
         display: flex;
         justify-content: center;
-        align-items: center;
     }
 }
 
