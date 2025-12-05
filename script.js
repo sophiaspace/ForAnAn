@@ -1,9 +1,10 @@
+// Switch Page Content
 function showContent(id) {
     document.querySelectorAll(".content").forEach(c => c.classList.remove("active"));
     document.getElementById(id).classList.add("active");
 }
 
-/* Memory Game */
+/* ---------------- MEMORY GAME ---------------- */
 document.addEventListener("DOMContentLoaded", () => {
     const cards = document.querySelectorAll(".card");
     let hasFlipped = false;
@@ -52,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
         [first, second] = [null, null];
     }
 
-    // Shuffle
+    // Shuffle Cards
     (function shuffle() {
         cards.forEach(card => {
             card.style.order = Math.floor(Math.random() * 12);
@@ -62,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
     cards.forEach(card => card.addEventListener("click", flipCard));
 });
 
-/* Maze Game */
+/* ---------------- MAZE GAME ---------------- */
 const canvas = document.getElementById("mazeCanvas");
 const ctx = canvas.getContext("2d");
 const tile = 30;
@@ -134,9 +135,26 @@ function move(e) {
     }
 }
 
+document.addEventListener("keydown", move);
+
+// MOBILE CONTROLS
+document.querySelectorAll(".btn-control").forEach(btn => {
+    btn.addEventListener("click", () => {
+        let event = { key: "" };
+
+        if (btn.dataset.move === "up") event.key = "ArrowUp";
+        if (btn.dataset.move === "down") event.key = "ArrowDown";
+        if (btn.dataset.move === "left") event.key = "ArrowLeft";
+        if (btn.dataset.move === "right") event.key = "ArrowRight";
+
+        move(event);
+    });
+});
+
 createPath(1, 1);
 maze[goal.y][goal.x] = 0;
 draw();
-document.addEventListener("keydown", move);
+
+
 
 
