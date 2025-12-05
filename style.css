@@ -33,13 +33,18 @@ body {
     border-radius: 8px;
 }
 
-/* Main Content */
+/* Main */
 .main-content {
     margin-left: 220px;
     padding: 20px;
     flex-grow: 1;
 }
 
+h1 {
+    font-size: 28px;
+}
+
+/* Content */
 .content {
     display: none;
     background: white;
@@ -50,22 +55,6 @@ body {
 
 .active {
     display: block;
-}
-
-/* Gallery */
-.photo-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    justify-content: center;
-}
-
-.photo-gallery img {
-    width: 120px;
-    height: 120px;
-    border-radius: 15px;
-    object-fit: cover;
-    box-shadow: 0 0 8px rgba(0,0,0,0.15);
 }
 
 /* Memory Game */
@@ -80,22 +69,37 @@ body {
     width: 70px;
     height: 70px;
     background: #2ecc71;
-    border-radius: 12px;
+    border-radius: 10px;
     font-size: 2rem;
     color: white;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     cursor: pointer;
+    transition: 0.4s;
+}
+
+.card.flipped {
+    background: white;
+    color: #2ecc71;
 }
 
 /* Maze Canvas */
 #mazeCanvas {
     border: 3px solid #2ecc71;
-    border-radius: 12px;
+    border-radius: 10px;
 }
 
-/* Mobile */
+/* Responsive: Mobile */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 150px;
+    }
+    .main-content {
+        margin-left: 160px;
+    }
+}
+
 @media (max-width: 480px) {
     body {
         flex-direction: column;
@@ -106,7 +110,6 @@ body {
         position: relative;
         display: flex;
         justify-content: space-around;
-        padding: 10px 0;
         box-shadow: none;
     }
 
@@ -123,4 +126,33 @@ body {
         width: 60px;
         height: 60px;
     }
+
+    /* Mobile Game Controls */
+    .controls {
+        margin-top: 15px;
+        text-align: center;
+    }
+
+    .btn-control {
+        background: #2ecc71;
+        color: white;
+        border: none;
+        padding: 15px 20px;
+        margin: 5px;
+        font-size: 20px;
+        border-radius: 10px;
+        cursor: pointer;
+        box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    }
+
+    .btn-control:active {
+        background: #27ae60;
+    }
+
+    .middle-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
+
