@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat 1 Bulan 💚</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="#" onclick="showContent('home')">🏠 Beranda</a>
+        <a href="#" onclick="showContent('wish')">💚 Ucapan</a>
+        <a href="#" onclick="showContent('memory')">📸 Kenangan</a>
+        <a href="#" onclick="showContent('gift')">🎮 Hadiah</a>
+        <a href="#" onclick="showContent('about')">ℹ️ Tentang Situs</a>
+    </div>
+
+    <!-- Main -->
+    <div class="main-content">
+        <h1>💚 Selamat 1 Bulan, Sayang! 💚</h1>
+
+        <!-- HOME -->
+        <div id="home" class="content active">
+            <p>Selamat datang di halaman kejutan 1 bulan kita! 💚</p>
+            <p>Aku berharap hubungan kita selalu manis, hangat, dan penuh cinta. ✨</p>
+            <p>Terima kasih sudah membuatku bahagia setiap hari. 🤍</p>
+            <p>Maaf membuatnya terlambat ya, soalnya aku sibuk dengan pekerjaan.</p>
+            <p>Waktu itu aku tanya kamu suka warna apa dan menyuruhmu memilih warna, tapi kamu malah pilih warna hitam hahaha.</p>
+            <p></p>Saat kusuruh pilih lagi, kamu memilih warna hijau.</p>
+            <p></p>Jadi aku memutuskan untuk menggunakan tema warna hijau untuk website ini.</p>
+        </div>
+
+        <!-- WISH -->
+        <div id="wish" class="content">
+            <p>Semoga An An menjadi anak yang baik, sehat, dan mencintaiku selamanya 💚</p>
+        </div>
+
+        <!-- MEMORY GAME -->
+        <div id="memory" class="content">
+            <h2 style="text-align:center">Tes Ingatan Kamu 💚</h2>
+
+            <div class="memory-game">
+                <div class="card" data-emoji="🌿"></div>
+                <div class="card" data-emoji="🌿"></div>
+                <div class="card" data-emoji="🍏"></div>
+                <div class="card" data-emoji="🍏"></div>
+                <div class="card" data-emoji="🥑"></div>
+                <div class="card" data-emoji="🥑"></div>
+                <div class="card" data-emoji="🌱"></div>
+                <div class="card" data-emoji="🌱"></div>
+            </div>
+        </div>
+
+        <!-- GIFT GAME -->
+        <div id="gift" class="content">
+            <h2>🎮 Game Labirin</h2>
+            <canvas id="mazeCanvas" width="350" height="450"></canvas>
+        </div>
+
+        <!-- ABOUT -->
+        <div id="about" class="content">
+            <p>Aku membuat situs ini sebagai hadiah 1 bulan untukmu. 💚</p>
+            <p>Aku harap kamu menyukainya meski sederhana.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

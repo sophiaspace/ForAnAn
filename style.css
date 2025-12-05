@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #c8f7c5, #e9ffe6);
+    color: #1b6b31;
+    display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 200px;
+    min-height: 100vh;
+    background: #2ecc71;
+    padding-top: 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    text-align: left;
+    box-shadow: 2px 0px 10px rgba(0,0,0,0.2);
+}
+
+.sidebar a {
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background: #27ae60;
+    border-radius: 8px;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 220px;
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.content {
+    display: none;
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.active {
+    display: block;
+}
+
+/* Gallery */
+.photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+}
+
+.photo-gallery img {
+    width: 120px;
+    height: 120px;
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: 0 0 8px rgba(0,0,0,0.15);
+}
+
+/* Memory Game */
+.memory-game {
+    display: grid;
+    grid-template-columns: repeat(4, 70px);
+    gap: 10px;
+    justify-content: center;
+}
+
+.card {
+    width: 70px;
+    height: 70px;
+    background: #2ecc71;
+    border-radius: 12px;
+    font-size: 2rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Maze Canvas */
+#mazeCanvas {
+    border: 3px solid #2ecc71;
+    border-radius: 12px;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        padding: 10px 0;
+        box-shadow: none;
+    }
+
+    .main-content {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .memory-game {
+        grid-template-columns: repeat(4, 60px);
+    }
+
+    .card {
+        width: 60px;
+        height: 60px;
+    }
+}
